@@ -1,1 +1,21 @@
+def encontrar_extremos(vetor):
+    if not vetor:
+        return None, None
 
+    menor = vetor[0]
+    maior = vetor[0]
+
+    for num in vetor[1:]:
+        if num < menor:
+            menor = num
+        if num > maior:
+            maior = num
+
+    return menor, maior
+
+numeros = [1, 2, 4, 16, 32, 64, -128]
+
+min_val, max_val = encontrar_extremos(numeros)
+
+print(f"Menor elemento: {min_val}")
+print(f"Maior elemento: {max_val}")
