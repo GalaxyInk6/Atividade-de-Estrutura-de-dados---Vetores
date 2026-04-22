@@ -1,1 +1,15 @@
+TAMANHO = 50
+vetor = []
+soma = 0
 
+print(f"Por favor, insira os {TAMANHO} números:")
+
+for i in range(TAMANHO):
+    valor = int(input(f"Posição [{i}]: "))
+    vetor.append(valor)
+
+for elemento in vetor:
+    soma += elemento
+
+print("-" * 20)
+print(f"A soma total dos elementos é: {soma}")
