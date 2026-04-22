@@ -1,1 +1,27 @@
+DIAS_DO_ANO = 365
+temperaturas = []
+soma_total = 0
 
+print(f"Registro de Temperaturas em São Luís ({DIAS_DO_ANO} dias)")
+print("-" * 40)
+
+for i in range(DIAS_DO_ANO):
+    temp = float(input(f"Digite a temperatura do dia {i+1}: "))
+    temperaturas.append(temp)
+    soma_total += temp
+
+media_anual = soma_total / DIAS_DO_ANO
+
+print("\n" + "="*40)
+print(f"MÉDIA ANUAL: {media_anual:.2f}°C")
+print("="*40)
+print("Temperaturas abaixo da média registradas:")
+
+encontrou_abaixo = False
+for i in range(DIAS_DO_ANO):
+    if temperaturas[i] < media_anual:
+        print(f"Dia {i+1}: {temperaturas[i]}°C")
+        encontrou_abaixo = True
+
+if not encontrou_abaixo:
+    print("Nenhuma temperatura registrada ficou abaixo da média.")
