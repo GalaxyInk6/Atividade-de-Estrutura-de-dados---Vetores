@@ -1,1 +1,19 @@
+original = []
+print("Digite 10 números inteiros:")
 
+for i in range(10):
+    num = int(input(f"Valor {i + 1}: "))
+    original.append(num)
+
+invertido = []
+for i in range(len(original) - 1, -1, -1):
+    invertido.append(original[i])
+
+print("\n" + "="*30)
+print(f"Vetor Original:  {original}")
+print(f"Vetor Invertido: {invertido}")
+
+print("\nElementos na ordem inversa:")
+for elemento in invertido:
+    print(elemento, end=" ")
+print("\n" + "="*30)
