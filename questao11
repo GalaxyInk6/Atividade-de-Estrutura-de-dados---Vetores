@@ -1,1 +1,12 @@
+vetor = []
 
+print("Digite 6 valores inteiros:")
+
+for i in range(6):
+    valor = int(input(f"Valor {i + 1}: "))
+    vetor.append(valor)
+
+print("\nValores na ordem inversa:")
+
+for i in range(5, -1, -1):
+    print(vetor[i])
