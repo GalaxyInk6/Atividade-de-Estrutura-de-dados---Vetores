@@ -1,1 +1,21 @@
+def processar_vetor():
+    vetor = []
+    soma = 0
+    multiplicacao = 1
 
+    print("Digite 5 números inteiros:")
+
+    for i in range(5):
+        num = int(input(f"Posição {i}: "))
+        vetor.append(num)
+
+        soma += num
+        multiplicacao *= num
+
+    print("\n" + "=" * 30)
+    print(f"Números digitados: {vetor}")
+    print(f"Soma total:       {soma}")
+    print(f"Multiplicação:    {multiplicacao}")
+    print("=" * 30)
+
+processar_vetor()
