@@ -1,1 +1,9 @@
+vetor = []
 
+for i in range(50):
+    valor = i * 2
+    vetor.append(valor)
+
+print("Vetor gerado (Dobro do índice):")
+for indice, elemento in enumerate(vetor):
+    print(f"Posição {indice}: {elemento}")
