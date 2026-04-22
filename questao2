@@ -1,1 +1,22 @@
+def processar_quadrados():
+    vetor_original = []
+    vetor_quadrados = []
 
+    print("Digite 10 números inteiros:")
+
+    for i in range(10):
+        try:
+            num = int(input(f"Elemento {i + 1}: "))
+            vetor_original.append(num)
+        except ValueError:
+            print("Entrada inválida. Por favor, insira um número inteiro.")
+            return
+
+    for num in vetor_original:
+        vetor_quadrados.append(num ** 2)
+
+    print("\n--- Resultados ---")
+    print(f"Vetor Original:  {vetor_original}")
+    print(f"Vetor Quadrados: {vetor_quadrados}")
+
+processar_quadrados()
