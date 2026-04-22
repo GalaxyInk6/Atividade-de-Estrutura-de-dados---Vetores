@@ -1,1 +1,29 @@
+def somar_posicoes_especificas():
+    vetor = []
 
+    print("Digite 8 valores inteiros para preencher o vetor:")
+    for i in range(8):
+        valor = int(input(f"Posição {i}: "))
+        vetor.append(valor)
+
+    print("\n" + "-" * 30)
+
+    try:
+        x = int(input("Digite o índice da posição X (0 a 7): "))
+        y = int(input("Digite o índice da posição Y (0 a 7): "))
+
+        valor_x = vetor[x]
+        valor_y = vetor[y]
+        soma = valor_x + valor_y
+
+        print("-" * 30)
+        print(f"Valor na posição {x}: {valor_x}")
+        print(f"Valor na posição {y}: {valor_y}")
+        print(f"A soma de vetor[{x}] + vetor[{y}] é: {soma}")
+
+    except IndexError:
+        print("\nERRO: Você digitou uma posição inválida! Use apenas números de 0 a 7.")
+    except ValueError:
+        print("\nERRO: Digite apenas números inteiros.")
+
+somar_posicoes_especificas()
