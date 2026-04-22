@@ -1,1 +1,18 @@
+def copiar_invertido():
+    X = []
+    Y = [0] * 10
 
+    print("Digite 10 números inteiros para o vetor X:")
+
+    for i in range(10):
+        valor = int(input(f"X[{i}]: "))
+        X.append(valor)
+
+    for i in range(10):
+        indice_y = 9 - i
+        Y[indice_y] = X[i]
+
+    print("\nVetor Y (Cópia invertida de X):")
+    print(Y)
+
+copiar_invertido()
