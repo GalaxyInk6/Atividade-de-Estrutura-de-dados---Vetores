@@ -1,1 +1,19 @@
+def analisar_dados_pessoas():
+    idades = []
+    alturas = []
 
+    for i in range(5):
+        print(f"--- Dados da {i + 1}ª Pessoa ---")
+        idade = int(input(f"Idade: "))
+        altura = float(input(f"Altura (ex: 1.75): "))
+
+        idades.append(idade)
+        alturas.append(altura)
+
+    media_idade = sum(idades) / 5
+    media_altura = sum(alturas) / 5
+
+    mais_velho = max(idades)
+    mais_novo = min(idades)
+    mais_alto = max(alturas)
+    mais_baixo = min(alturas)
