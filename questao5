@@ -1,1 +1,22 @@
+n = int(input("Digite o número de elementos: "))
 
+if n > 0:
+    vetor = []
+
+    for i in range(n):
+        valor = int(input(f"Digite o valor para a posição [{i}]: "))
+        vetor.append(valor)
+
+    maior = vetor[0]
+    menor = vetor[0]
+
+    for numero in vetor:
+        if numero > maior:
+            maior = numero
+        if numero < menor:
+            menor = numero
+
+    print(f"\nMaior valor: {maior}")
+    print(f"Menor valor: {menor}")
+else:
+    print("O tamanho do vetor deve ser maior que zero.")
