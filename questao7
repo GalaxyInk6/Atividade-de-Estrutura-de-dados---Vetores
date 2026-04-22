@@ -1,1 +1,24 @@
+n = int(input("Digite o tamanho dos vetores: "))
 
+vetor_a = []
+vetor_b = []
+vetor_c = []
+
+print("\n--- Preenchendo o Vetor A ---")
+for i in range(n):
+    valor = int(input(f"Vetor A, posição [{i}]: "))
+    vetor_a.append(valor)
+
+print("\n--- Preenchendo o Vetor B ---")
+for i in range(n):
+    valor = int(input(f"Vetor B, posição [{i}]: "))
+    vetor_b.append(valor)
+
+for i in range(n):
+    soma_posicao = vetor_a[i] + vetor_b[i]
+    vetor_c.append(soma_posicao)
+
+print("\n--- Resultado Final ---")
+print(f"Vetor A: {vetor_a}")
+print(f"Vetor B: {vetor_b}")
+print(f"Vetor C (Soma): {vetor_c}")
